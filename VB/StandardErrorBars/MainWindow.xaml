@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StandardErrorBars"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" 
+        x:Class="StandardErrorBars.MainWindow"
+        mc:Ignorable="d"
+        dx:ThemeManager.ThemeName="Office2013"
+        Title="MainWindow" Height="500" Width="700" Loaded="OnLoaded">
+    <Border Margin="2" BorderThickness="1" BorderBrush="DarkGray">
+        <Grid>
+            <dxc:ChartControl BorderThickness="0">
+                <dxc:ChartControl.Palette>
+                    <dxc:Office2013Palette/>
+                </dxc:ChartControl.Palette>
+                <dxc:ChartControl.Legends>
+                    <dxc:Legend Visible="True" HorizontalPosition="Left"/>
+                </dxc:ChartControl.Legends>
+                <dxc:ChartControl.Titles>
+                    <dxc:Title Content="Temperature in New York" HorizontalAlignment="Center"/>
+                </dxc:ChartControl.Titles>
+                <dxc:XYDiagram2D x:Name="diagram">
+                    <dxc:XYDiagram2D.AxisX>
+                        <dxc:AxisX2D TickmarksMinorVisible="False"/>
+                    </dxc:XYDiagram2D.AxisX>
+                    <dxc:XYDiagram2D.AxisY>
+                        <dxc:AxisY2D>
+                            <dxc:AxisY2D.NumericScaleOptions>
+                                <dxc:ContinuousNumericScaleOptions AutoGrid="False" 
+                                                                   GridSpacing="10"/>
+                            </dxc:AxisY2D.NumericScaleOptions>
+                            <dxc:AxisY2D.WholeRange>
+                                <dxc:Range dxc:AxisY2D.AlwaysShowZeroLevel="False"/>
+                            </dxc:AxisY2D.WholeRange>
+                        </dxc:AxisY2D>
+                    </dxc:XYDiagram2D.AxisY>
+                    <!--region #StandardErrorBars-->
+                    <dxc:PointSeries2D  x:Name="pointSeries" DisplayName="Daytime Temperatures in July">
+                        <dxc:PointSeries2D.Indicators>
+                            <dxc:StandardErrorBars Direction="Both" 
+                                                   EndStyle="Cap"
+                                                   ShowInLegend="True"
+                                                   LegendText="Standard Error"/>
+                        </dxc:PointSeries2D.Indicators>
+                    </dxc:PointSeries2D>
+                    <!--endregion #StandardErrorBars-->
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl>
+        </Grid>
+    </Border>
+</Window>
