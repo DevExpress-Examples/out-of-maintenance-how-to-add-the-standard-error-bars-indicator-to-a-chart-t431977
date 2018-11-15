@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/StandardErrorBars/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/StandardErrorBars/MainWindow.xaml))
+<!-- default file list end -->
 # How to: Add the Standard Error Bars indicator to a chart
 
 
