@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 16
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardErrorBars", "StandardErrorBars\StandardErrorBars.csproj", "{C5686BB1-F13B-45C3-B78E-9A4149C29953}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardErrorBars", "StandardErrorBars\StandardErrorBars.Net5.csproj", "{C5686BB1-F13B-45C3-B78E-9A4149C29953}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
